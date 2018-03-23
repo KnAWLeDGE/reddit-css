@@ -1,4 +1,4 @@
-.side .md p {
+/*.side .md p {
   &:nth-child(n+10):nth-child(-n+16) > a {
     display: block;
     position: relative;
@@ -42,30 +42,1044 @@
   &:nth-child(16) a {
     background-position: 0 -72px;
   }
+}*/
+
+.side .md {
+  h5 {
+    top: 430px;
+    left: 20px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    padding: 0 35px;
+    height: 48px;
+    font-weight: 700;
+    color: #761fa1;
+    line-height: 50px;
+    border-left: 4px solid #761fa1;
+  }
+  table {
+    display: block;
+    position: absolute;
+    top: 435px;
+    right: 340px;
+    left: 20px;
+    padding: 12px 30px 12px 165px;
+    max-height: 46px;
+    background-color: #FFF;
+    color: #666;
+    text-align: left;
+    font-weight: 300;
+    font-size: 14px;
+    box-shadow: 0px 0px 2.75px 0.25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    thead {
+      left: 0;
+      right: 0;
+      padding: 0 0 2px 145px;
+      list-style: none;
+      z-index: 100;
+      width: auto;
+      pointer-events: none;
+      height: 22px;
+      margin-bottom: 2px;
+    }
+    tr {
+      font-size: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: top;
+    }
+    a {
+      background-position: right 2px center;
+      color: #761fa1;
+      border-radius: 5px;
+      pointer-events: all;
+      font-size: 12px;
+      line-height: 17px;
+      height: 17px;
+      position: relative;
+      margin-right: .55em;
+      padding: 2px 8px;
+      text-decoration: none;
+      border: 1px solid #EEE;
+      background-color: #fdfdfd;
+      border-left: 4px solid #761fa1;
+      &:hover {
+        background-color: #f6f6f6;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 2px;
+        margin-top: -2px;
+        margin-right: -4px;
+        width: 16px;
+        height: 16px;
+        background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite%%);
+        background-position: 0 0, -128px -240px;
+        transition: background-position .35s ease;
+      }
+    }
+  }
+  > table th {
+    padding: 0;
+    border: 0;
+    vertical-align: top;
+  }
+  > table [href*='h='] {
+    display: block;
+  }
 }
 
-html {
-  &:lang(fn-00) .link:not(.linkflair-epic), &:lang(fn-01) .link:not(.linkflair-bug), &:lang(fn-02) .link:not(.linkflair-discussion):not(.linkflair-suggestion), &:lang(fn-03) .link:not(.linkflair-help), &:lang(fn-04) .link:not(.linkflair-media):not(.linkflair-streamer), &:lang(fn-05) .link:not(.linkflair-creative), &:lang(fn-06) .link:not(.linkflair-humor) {
+html:lang(fn-00) .side .md > table [href*="www"] {
+  display: block;
+}
+
+.side .md > table {
+  [href*='s='], [href*="www"] {
     display: none;
   }
-  &:lang(fn) .side .md p:nth-child(37) {
-    display: block !important;
-    a {
+}
+
+html:lang(fn-00) .side .md > table [href*='h='] {
+  display: none;
+}
+
+.side .md {
+  > table {
+    [href*="h="]:hover::after, [href*="s="]::after, [href*="www"]:hover::after {
+      background-position: 0 0,-144px -240px;
+    }
+    [href*="s="]:hover::after, [href*="h="]::after, [href*="www"], [href*="fn-00"]:hover::after {
+      background-position: 0 0,-128px -240px;
+    }
+  }
+  p:nth-child(28) a {
+    &::before {
       content: "";
-      z-index: 100;
+      width: 24px;
+      height: 24px;
+      visibility: visible;
+      display: block;
       position: absolute;
-      top: 278px;
-      left: 130px;
-      background: url(%%logo%%) no-repeat left center;
-      width: 175px;
-      height: 106px;
-      background-size: 90%;
-      text-indent: -1999px;
-      overflow: hidden;
+      right: -25px;
+      top: 5px;
+      background-image: url(%%menu-items%%);
+      background-position: -192px -312px;
+      transform-origin: 50% 50%;
+      transform: scale(0.6666);
+      opacity: .75;
+      cursor: pointer;
+      pointer-events: all;
+      z-index: 100;
+    }
+    top: 448px;
+    right: 415px;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
+    background-color: #223;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    &:hover {
+      visibility: visible;
     }
   }
 }
 
-.side .md p:nth-child(37) {
+/*incoming lots and lots of code*/ 
+
+.side .md > table [href*="fn-00"] {
   display: none;
+}
+
+html {
+  &:lang(fn-01) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-02) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=d"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-03) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=d"] {
+      display: none;
+    }
+  }
+  &:lang(fn-04) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-05) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-06) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-07) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=c"] {
+      display: none;
+    }
+  }
+  &:lang(fn-08) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-09) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-10) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=d"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-12) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-13) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-14) .side .md > table {
+    [href*="h=a"], [href*="h=b"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-15) .side .md > table {
+    [href*="h=a"], [href*="h=b"] {
+      display: none;
+    }
+  }
+  &:lang(fn-16) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-17) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-18) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=d"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-19) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=d"] {
+      display: none;
+    }
+  }
+  &:lang(fn-20) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-21) .side .md > table {
+    [href*="h=a"], [href*="h=c"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-23) .side .md > table {
+    [href*="h=a"], [href*="h=c"] {
+      display: none;
+    }
+  }
+  &:lang(fn-24) .side .md > table {
+    [href*="h=a"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-25) .side .md > table {
+    [href*="h=a"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-28) .side .md > table {
+    [href*="h=a"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-30) .side .md > table {
+    [href*="h=a"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-31) .side .md > table [href*="h=a"] {
+    display: none;
+  }
+  &:lang(fn-32) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-33) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-34) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=d"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-35) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=d"] {
+      display: none;
+    }
+  }
+  &:lang(fn-36) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-37) .side .md > table {
+    [href*="h=b"], [href*="h=c"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-39) .side .md > table {
+    [href*="h=b"], [href*="h=c"] {
+      display: none;
+    }
+  }
+  &:lang(fn-40) .side .md > table {
+    [href*="h=b"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-41) .side .md > table {
+    [href*="h=b"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-47) .side .md > table [href*="h=b"] {
+    display: none;
+  }
+  &:lang(fn-48) .side .md > table {
+    [href*="h=c"], [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-49) .side .md > table {
+    [href*="h=c"], [href*="h=d"], [href*="h=e"] {
+      display: none;
+    }
+  }
+  &:lang(fn-51) .side .md > table {
+    [href*="h=c"], [href*="h=d"] {
+      display: none;
+    }
+  }
+  &:lang(fn-55) .side .md > table [href*="h=c"] {
+    display: none;
+  }
+  &:lang(fn-56) .side .md > table {
+    [href*="h=d"], [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-57) .side .md > table [href*="h=e"], &:lang(fn-59) .side .md > table [href*="h=d"] {
+    display: none;
+  }
+  &:lang(fn-60) .side .md > table {
+    [href*="h=e"], [href*="h=f"] {
+      display: none;
+    }
+  }
+  &:lang(fn-61) .side .md > table [href*="h=e"], &:lang(fn-62) .side .md > table [href*="h=f"] {
+    display: none;
+  }
+  &:lang(fn-01) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-02) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=d"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-03) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=d"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-04) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-05) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-06) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-07) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=c"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-08) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-09) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-10) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=d"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-12) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-13) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-14) .side .md > table {
+    [href*="s=a"], [href*="s=b"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-15) .side .md > table {
+    [href*="s=a"], [href*="s=b"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-16) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-17) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-18) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=d"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-19) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=d"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-20) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-21) .side .md > table {
+    [href*="s=a"], [href*="s=c"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-23) .side .md > table {
+    [href*="s=a"], [href*="s=c"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-24) .side .md > table {
+    [href*="s=a"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-25) .side .md > table {
+    [href*="s=a"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-28) .side .md > table {
+    [href*="s=a"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-30) .side .md > table {
+    [href*="s=a"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-31) .side .md > table [href*="s=a"] {
+    display: block;
+    border-left: 4px solid grey;
+    color: grey;
+  }
+  &:lang(fn-32) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-33) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-34) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=d"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-35) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=d"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-36) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-37) .side .md > table {
+    [href*="s=b"], [href*="s=c"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-39) .side .md > table {
+    [href*="s=b"], [href*="s=c"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-40) .side .md > table {
+    [href*="s=b"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-41) .side .md > table {
+    [href*="s=b"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-47) .side .md > table [href*="s=b"] {
+    display: block;
+    border-left: 4px solid grey;
+    color: grey;
+  }
+  &:lang(fn-48) .side .md > table {
+    [href*="s=c"], [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-49) .side .md > table {
+    [href*="s=c"], [href*="s=d"], [href*="s=e"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-51) .side .md > table {
+    [href*="s=c"], [href*="s=d"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-55) .side .md > table [href*="s=c"] {
+    display: block;
+    border-left: 4px solid grey;
+    color: grey;
+  }
+  &:lang(fn-56) .side .md > table {
+    [href*="s=d"], [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-57) .side .md > table [href*="s=e"], &:lang(fn-59) .side .md > table [href*="s=d"] {
+    display: block;
+    border-left: 4px solid grey;
+    color: grey;
+  }
+  &:lang(fn-60) .side .md > table {
+    [href*="s=e"], [href*="s=f"] {
+      display: block;
+      border-left: 4px solid grey;
+      color: grey;
+    }
+  }
+  &:lang(fn-61) .side .md > table [href*="s=e"], &:lang(fn-62) .side .md > table [href*="s=f"] {
+    display: block;
+    border-left: 4px solid grey;
+    color: grey;
+  }
+  &:lang(fn-01) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-02) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-03) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-04) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-05) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-06) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-07) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=c"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-08) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-09) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-10) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=d"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-12) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-13) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-14) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-15) .side .md > table {
+    [href*="s=a"]::after, [href*="s=b"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-16) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-17) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-18) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-19) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=d"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-20) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-21) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-23) .side .md > table {
+    [href*="s=a"]::after, [href*="s=c"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-24) .side .md > table {
+    [href*="s=a"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-25) .side .md > table {
+    [href*="s=a"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-28) .side .md > table {
+    [href*="s=a"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-30) .side .md > table {
+    [href*="s=a"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-31) .side .md > table [href*="s=a"]::after {
+    background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+  }
+  &:lang(fn-32) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-33) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-34) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-35) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=d"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-36) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-37) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-39) .side .md > table {
+    [href*="s=b"]::after, [href*="s=c"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-40) .side .md > table {
+    [href*="s=b"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-41) .side .md > table {
+    [href*="s=b"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-47) .side .md > table [href*="s=b"]::after {
+    background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+  }
+  &:lang(fn-48) .side .md > table {
+    [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-49) .side .md > table {
+    [href*="s=c"]::after, [href*="s=d"]::after, [href*="s=e"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-51) .side .md > table {
+    [href*="s=c"]::after, [href*="s=d"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-55) .side .md > table [href*="s=c"]::after {
+    background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+  }
+  &:lang(fn-56) .side .md > table {
+    [href*="s=d"]::after, [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-57) .side .md > table [href*="s=e"]::after, &:lang(fn-59) .side .md > table [href*="s=d"]::after {
+    background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+  }
+  &:lang(fn-60) .side .md > table {
+    [href*="s=e"]::after, [href*="s=f"]::after {
+      background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+    }
+  }
+  &:lang(fn-61) .side .md > table [href*="s=e"]::after, &:lang(fn-62) .side .md > table [href*="s=f"]::after {
+    background-image: linear-gradient(90deg, #FAFAFA, transparent 1px), url(%%menu-sprite-grey%%);
+  }
+  &:lang(fn-31) .link {
+    &.linkflair-bug, &.linkflair-devbug {
+      display: none;
+    }
+  }
+  &:lang(fn-15) .link {
+    &.linkflair-bug, &.linkflair-devbug, &.linkflair-discussion, &.linkflair-devdiscussion, &.linkflair-suggestion, &.linkflair-devsuggestion {
+      display: none;
+    }
+  }
+  &:lang(fn-07) .link {
+    &.linkflair-bug, &.linkflair-devbug, &.linkflair-discussion, &.linkflair-devdiscussion, &.linkflair-suggestion, &.linkflair-devsuggestion, &.linkflair-help, &.linkflair-devhelp {
+      display: none;
+    }
+  }
+  &:lang(fn-03) .link {
+    &:not(.linkflair-humor), &:not(.linkflair-devhumor), &:not(.linkflair-creative), &:not(.linkflair-devcreative) {
+      display: none;
+    }
+  }
+  &:lang(fn-01) .link {
+    &:not(.linkflair-humor), &:not(.linkflair-devhumor) {
+      display: none;
+    }
+  }
+  &:lang(fn-47) .link {
+    &.linkflair-discussion, &.linkflair-devdiscussion, &.linkflair-suggestion, &.linkflair-devsuggestion {
+      display: none;
+    }
+  }
+  &:lang(fn-39) .link {
+    &.linkflair-discussion, &.linkflair-devdiscussion, &.linkflair-suggestion, &.linkflair-devsuggestion, &.linkflair-help, &.linkflair-devhelp {
+      display: none;
+    }
+  }
+  &:lang(fn-35) .link {
+    &:not(.linkflair-creative), &:not(.linkflair-devcreative), &:not(.linkflair-humor), &:not(.linkflair-devhumor), &:not(.linkflair-bug), &:not(.linkflair-devbug) {
+      display: none;
+    }
+  }
+  &:lang(fn-33) .link {
+    &:not(.linkflair-humor), &:not(.linkflair-devhumor), &:not(.linkflair-bug), &:not(.linkflair-devbug) {
+      display: none;
+    }
+  }
+  &:lang(fn-32) .link {
+    &:not(.linkflair-bug), &:not(.linkflair-devbug) {
+      display: none;
+    }
+  }
+  &:lang(fn-55) .link {
+    &.linkflair-help, &.linkflair-devhelp {
+      display: none;
+    }
+  }
+  &:lang(fn-51) .link {
+    &.linkflair-help, &.linkflair-devhelp, &.linkflair-media, &.linkflair-devmedia, &.linkflair-streamer, &.linkflair-devstreamer {
+      display: none;
+    }
+  }
+  &:lang(fn-49) .link {
+    &:not(.linkflair-humor), &:not(.linkflair-devhumor), &:not(.linkflair-bug), &:not(.linkflair-devbug), &:not(.linkflair-discussion), &:not(.linkflair-devdiscussion), &:not(.linkflair-suggestion), &:not(.linkflair-devsuggestion) {
+      display: none;
+    }
+  }
+  &:lang(fn-48) .link {
+    &:not(.linkflair-bug), &:not(.linkflair-devbug), &:not(.linkflair-discussion), &:not(.linkflair-devdiscussion), &:not(.linkflair-suggestion), &:not(.linkflair-devsuggestion) {
+      display: none;
+    }
+  }
+  &:lang(fn-16) .link {
+    &:not(.linkflair-discussion), &:not(.linkflair-devdiscussion), &:not(.linkflair-suggestion), &:not(.linkflair-devsuggestion) {
+      display: none;
+    }
+  }
+  &:lang(fn-59) .link {
+    &.linkflair-media, &.linkflair-devmedia, &.linkflair-streamer, &.linkflair-devstreamer {
+      display: none;
+    }
+  }
+  &:lang(fn-57) .link {
+    &.linkflair-media, &.linkflair-devmedia, &.linkflair-streamer, &.linkflair-devstreamer, &.linkflair-creative, &.linkflair-devcreative {
+      display: none;
+    }
+  }
+  &:lang(fn-56) .link {
+    &.linkflair-media, &.linkflair-devmedia, &.linkflair-streamer, &.linkflair-devstreamer, &.linkflair-creative, &.linkflair-devcreative, &.linkflair-humor, &.linkflair-devhumor {
+      display: none;
+    }
+  }
+  &:lang(fn-24) .link {
+    &:not(.linkflair-discussion), &:not(.linkflair-devdiscussion), &:not(.linkflair-suggestion), &:not(.linkflair-devsuggestion), &:not(.linkflair-help), &:not(.linkflair-devhelp) {
+      display: none;
+    }
+  }
+  &:lang(fn-08) .link {
+    &:not(.linkflair-help), &:not(.linkflair-devhelp) {
+      display: none;
+    }
+  }
+  &:lang(fn-61) .link {
+    &.linkflair-creative, &.linkflair-devcreative {
+      display: none;
+    }
+  }
+  &:lang(fn-60) .link {
+    &.linkflair-creative, &.linkflair-devcreative, &.linkflair-humor, &.linkflair-devhumor {
+      display: none;
+    }
+  }
+  &:lang(fn-28) .link {
+    &.linkflair-creative, &.linkflair-devcreative, &.linkflair-humor, &.linkflair-devhumor, &.linkflair-bug, &.linkflair-devbug {
+      display: none;
+    }
+  }
+  &:lang(fn-12) .link {
+    &:not(.linkflair-help), &:not(.linkflair-devhelp), &:not(.linkflair-media), &:not(.linkflair-devmedia), &:not(.linkflair-streamer), &:not(.linkflair-devstreamer) {
+      display: none;
+    }
+  }
+  &:lang(fn-04) .link {
+    &:not(.linkflair-media), &:not(.linkflair-devmedia), &:not(.linkflair-streamer), &:not(.linkflair-devstreamer) {
+      display: none;
+    }
+  }
+  &:lang(fn-62) .link {
+    &.linkflair-humor, &.linkflair-devhumor {
+      display: none;
+    }
+  }
+  &:lang(fn-30) .link {
+    &.linkflair-humor, &.linkflair-devhumor, &.linkflair-bug, &.linkflair-devbug {
+      display: none;
+    }
+  }
+  &:lang(fn-14) .link {
+    &.linkflair-humor, &.linkflair-devhumor, &.linkflair-bug, &.linkflair-devbug, &.linkflair-discussion, &.linkflair-devdiscussion, &.linkflair-suggestion, &.linkflair-devsuggestion {
+      display: none;
+    }
+  }
+  &:lang(fn-06) .link {
+    &:not(.linkflair-media), &:not(.linkflair-devmedia), &:not(.linkflair-streamer), &:not(.linkflair-devstreamer), &:not(.linkflair-creative), &:not(.linkflair-devcreative) {
+      display: none;
+    }
+  }
+  &:lang(fn-02) .link {
+    &:not(.linkflair-creative), &:not(.linkflair-devcreative) {
+      display: none;
+    }
+  }
+  &:lang(fn-00) .link:not(.linkflair-official) {
+    display: none;
+  }
+  &:lang(fn-13) .link {
+    &:not(.linkflair-help), &:not(.linkflair-devhelp), &:not(.linkflair-media), &:not(.linkflair-devmedia), &:not(.linkflair-streamer), &:not(.linkflair-devstreamer), &:not(.linkflair-humor), &:not(.linkflair-devhumor) {
+      display: none;
+    }
+  }
+  &:lang(fn-23) .link {
+    &.linkflair-bug, &.linkflair-devbug, &.linkflair-help, &.linkflair-devhelp {
+      display: none;
+    }
+  }
 }
