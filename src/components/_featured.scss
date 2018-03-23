@@ -133,131 +133,117 @@
 
 /* NAVIGATION BAR ICONS */
 
-.side blockquote p:nth-child(1) {
+.side blockquote p {
+  &:nth-child(1) {
     a {
-        position: absolute;
-        top: 316px !important;
-        left: 315px !important;
-        right: 0 !important;
-        background: none;
-        width: 32px;
-        height: 32px;
-        background: url(%%discord%%) no-repeat !important;
-        border: none;
-
-        &:hover {
-            text-decoration: none;
-        }
+      position: absolute;
+      top: 316px !important;
+      left: 315px !important;
+      right: 0 !important;
+      background: none;
+      width: 32px;
+      height: 32px;
+      background: url("%%server%%") no-repeat !important;
+      border: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
-
     &:before {
-        content: 'Join us on Discord for community discussion!';
-        background: black;
-        background: rgba(255, 255, 255, 0.85);
-        color: $purple;
-        border: 1px solid $purple;
-        text-transform: uppercase;
-        position: absolute;
-        top: 265px;
-        left: 175px;
-        padding: 10px 20px;
-        z-index: 1337;
-        border-radius: 3px;
-        font-size: 11px;
-        opacity: 0;
-        transition: top 0.3s, opacity 0.3s;
+      content: 'Check Server Status';
+      background: black;
+      background: rgba(255, 255, 255, 0.85);
+      color: #761fa1;
+      border: 1px solid #761fa1;
+      text-transform: uppercase;
+      position: absolute;
+      top: 265px;
+      left: 240px;
+      padding: 10px 20px;
+      z-index: 1337;
+      border-radius: 3px;
+      font-size: 11px;
+      opacity: 0;
+      transition: top 0.3s, opacity 0.3s;
     }
-
-    &:hover {
-        &:before {
-            opacity: 1;
-            top: 255px;
-        }
+    &:hover:before {
+      opacity: 1;
+      top: 255px;
     }
-}
-
-.side blockquote p:nth-child(2) {
+  }
+  &:nth-child(2) {
     a {
-        position: absolute;
-        top: 314px !important;
-        left: 375px !important;
-        right: 0 !important;
-        background: none;
-        width: 32px;
-        height: 32px;
-        background: url(%%calendar%%) no-repeat;
-        border: none;
-
-        &:hover {
-            text-decoration: none;
-        }
+      position: absolute;
+      top: 316px !important;
+      left: 375px !important;
+      right: 0 !important;
+      background: none;
+      width: 32px;
+      height: 32px;
+      background: url("%%discord%%") no-repeat;
+      border: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
-
     &:before {
-        content: 'View the community calendar for upcoming events!';
-        background: black;
-        background: rgba(255, 255, 255, 0.85);
-        color: $purple;
-        border: 1px solid $purple;
-        text-transform: uppercase;
-        position: absolute;
-        top: 265px;
-        left: 225px;
-        padding: 10px 20px;
-        z-index: 1337;
-        border-radius: 3px;
-        font-size: 11px;
-        opacity: 0;
-        transition: top 0.3s, opacity 0.3s;
+      content: 'Join us on Discord for community discussion!';
+      background: black;
+      background: rgba(255, 255, 255, 0.85);
+      color: #761fa1;
+      border: 1px solid #761fa1;
+      text-transform: uppercase;
+      position: absolute;
+      top: 265px;
+      left: 225px;
+      padding: 10px 20px;
+      z-index: 1337;
+      border-radius: 3px;
+      font-size: 11px;
+      opacity: 0;
+      transition: top 0.3s, opacity 0.3s;
     }
-
-    &:hover {
-        &:before {
-            opacity: 1;
-            top: 255px;
-        }
+    &:hover:before {
+      opacity: 1;
+      top: 255px;
     }
-}
-
-.side blockquote p:nth-child(3) {
+  }
+  &:nth-child(3) {
     a {
-        position: absolute;
-        top: 316px !important;
-        left: 435px !important;
-        right: 0 !important;
-        background: none;
-        width: 32px;
-        height: 32px;
-        background: url(%%faq%%) no-repeat;
-        border: none;
-
-        &:hover {
-            text-decoration: none;
-        }
+      position: absolute;
+      top: 316px !important;
+      left: 435px !important;
+      right: 0 !important;
+      background: none;
+      width: 32px;
+      height: 32px;
+      background: url("%%epic%%") no-repeat;
+      background-size: 28px;
+      border: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
-
     &:before {
-        content: 'Frequently asked questions by the community.';
-        background: black;
-        background: rgba(255, 255, 255, 0.85);
-        color: $purple;
-        border: 1px solid $purple;
-        text-transform: uppercase;
-        position: absolute;
-        top: 265px;
-        left: 285px;
-        padding: 10px 20px;
-        z-index: 1337;
-        border-radius: 3px;
-        font-size: 11px;
-        opacity: 0;
-        transition: top 0.3s, opacity 0.3s;
+      content: 'Official posts by Epic Games!';
+      background: black;
+      background: rgba(255, 255, 255, 0.85);
+      color: #761fa1;
+      border: 1px solid #761fa1;
+      text-transform: uppercase;
+      position: absolute;
+      top: 265px;
+      left: 335px;
+      padding: 10px 20px;
+      z-index: 1337;
+      border-radius: 3px;
+      font-size: 11px;
+      opacity: 0;
+      transition: top 0.3s, opacity 0.3s;
     }
-
-    &:hover {
-        &:before {
-            opacity: 1;
-            top: 255px;
-        }
+    &:hover:before {
+      opacity: 1;
+      top: 255px;
     }
+  }
 }
