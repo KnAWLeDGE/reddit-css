@@ -1,30 +1,34 @@
-# Fortnite Battle Royale subreddit theme
+# /r/ForniteBR Subreddit Stylesheet
+/r/FortniteBR Subreddit CSS - Managed by /u/MCiLuZiioNz and /u/MasterGoat
 
-This repository contains the theme for [the Fortnite Battle Royale subreddit](https://reddit.com/r/FortniteBR)
+# Forking the Repository
 
-## Table of content
+## Forking
+Simply click the fork button at the top right of the repository to copy this repository into your own to make changes to.
 
-* [How to build](#how-to-build)
-* [How to test](#how-to-test)
-* [Contribution](#contribution)
-* [License](#license)
+# Cloning your Repository
 
-## How to build
+## Requirements
+* [Git](https://git-scm.com/downloads) (I recommend the command line NOT GUI)
 
-WIP
+## Installing
+When installing, for ease of use I recommend leaving the shell integration on.
 
-## How to test
+# Cloning
 
-WIP
+In any folder, open up Git bash and type 'git clone (insert your git url here) (folder)'. For example `git clone https://github.com/fortnite-subreddit/reddit-css.git fortnite-repo'
 
-## Contribution
+This will clone the remote repository into a folder called fortnite-repo.
 
-See the [contributing guidelines](CONTRIBUTING.md).
+This is not a git tutorial so for more information on how to push changes, look online (git add, git commit, git push)
 
-## Changelog
+# Compiling the SASS
 
-See the [changelog](CHANGELOG.md).
+## Requirements 
+* [NPM (Node Package Manager)](https://docs.npmjs.com/getting-started/installing-node)
 
-## License
+## Installing Dependencies
+Open Command Prompt or Powershell in the cloned repository and simply run 'npm install'. All dependencies should be automatically installed.
 
-See the [license](LICENSE).
+## Compiling to CSS
+Open Command Prompt or Powershell in the cloned repository and simply run 'gulp'. All .scss files will be compiled to the /css directory.
